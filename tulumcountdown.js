@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-  Countdown = function() {
+  var Countdown = function() {
     var now = new Date();
     var leaveSFO = new Date("July 3, 2014 13:25:00");
     var millisTilTakeoff = leaveSFO - now;
@@ -20,7 +20,7 @@ if (Meteor.isClient) {
       1000
     );
   }
-  clockDisplay = function() {
+  var clockDisplay = function() {
     var countdown = new Countdown();
     $('#clock').html(
       countdown.daysTilTakeoff + " days " +
